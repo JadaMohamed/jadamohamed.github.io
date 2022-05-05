@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -293,41 +294,42 @@ padding-left: 30px;
 }
 
 /*hobbies section*/
-.hobbies_info li img{
+.hobbies_info .cards .card img{
     width: 125px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
-.hobbies_info .cards ul{
-    list-style: none;
+.hobbies_info .cards{
+    padding-top: 15px;
     font-size: 11px;
     display: flex;
     justify-content: space-between;
     text-align: center;
+    flex-wrap: wrap;
 }
-.hobbies_info .cards{
-    padding-top: 15px;
-}
-.hobbies_info .cards ul .card {
-    width: 125px;
-    height: 160px;
+.hobbies_info .cards .card {
     background-color: rgba(0,0,0,0.3);
     border: 1px solid #c1c2fb;
     border-radius: 5px;
     transition: 0.2s ease-in;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 25px;
 }
-.hobbies_info .cards ul .card:hover{
+.hobbies_info .cards .card:hover{
     cursor: pointer;
     background-color: #c1c2fb;
     color: #15163b;
 }
-.hobbies_info .cards ul .portfolio img{
+.hobbies_info .cards .portfolio img{
 width: 50px;
 padding-top: 10px;
 transition: 0.4s ease-out;
 }
-.hobbies_info .cards ul .portfolio{
+.hobbies_info .cards .portfolio{
     margin: auto;
 }
-.hobbies_info .cards ul .portfolio img:hover{
+.hobbies_info .cards .portfolio img:hover{
     cursor: pointer;
     filter: brightness(50%);
 }
