@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <title>Key Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boody">
+        <div class="TITLE">Determine Keys from Functional Dependencies</div>
+        <div class="relation">
+            <p>Relation ( </p>
+            <input type="text" id="GetRelation" placeholder="A,B,C,D,E" title="Add Relation's attributes separating with ','">
+            <p> );</p> 
+        </div>
+        <div class="function_dep">
+            <div class="title"><p>Function dependency</p></div>
+            <div>
+                <div class="fd" id="funcDs">
+                    <input class="left_" id="left_" type="text" placeholder="A,B" >
+                    <img src="images/determine.png" style="width: 20px;" title="Determine">
+                    <input class="right_" id="right_" type="text" placeholder="C,D,E">
+                </div>
+            </div>
+            <div class="fd_input_wrap">
+                <button id="button_add" onclick="addfd()"><img src="images/add.png" style="width: 25px;" title="Add functional dependency"></button>
+                <button id="button_remove" onlick="removefd()"><img src="images/remove.png" style="width: 25px;" title="Remove functional dependency"></button>
+            </div>
+            <div class="calculate">
+                <button onclick="calculate()">Find Key(s)</button>
+            </div>
+        </div>
+        <div class="result">
+            <p>Result</p>
+            <p class="outp" id="outp">["..."]</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
