@@ -55,9 +55,8 @@ header{
  .sides .leftSide{
     background-color: rgba(0,0,0,0.3);
     align-items: center;
-    padding: 0 25px;
     display: flex;
-    width: 200px;
+    min-width: 200px;
     font-family: 'Abel';
     color: #c1c2fb;
     padding: 20px;
