@@ -339,9 +339,8 @@ a{
     border-radius: 5%;
 }
 .projects_info .cardsP{
-    height: 100%;
     background-color: #15163b;
-    padding: 0 0 0 80px;
+    padding: 16% 0 0 16%;
     align-items: center;
     justify-content: center;
     width: 100%;
