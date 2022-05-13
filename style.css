@@ -338,9 +338,8 @@ a{
     width: 80px;
     border-radius: 5%;
 }
-.projects_info .cardsP{
-    background-color: #15163b;
-    padding: 16% 0 0 16%;
+.projects_info .cards{
+    padding: 16% 0 0 80px;
     align-items: center;
     justify-content: center;
     width: 100%;
