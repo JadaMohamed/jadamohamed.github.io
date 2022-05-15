@@ -17,19 +17,19 @@ function submitRelation() {
 document.getElementById('button_add').onclick = addfd;
 document.getElementById('button_remove').onclick = removefd;
 var original = document.getElementById('funcDs');
-var i = 0;
+var df = 0;
 
 function addfd() {
     var clone = original.cloneNode(true); // "deep" clone
-    clone.id = "added" + ++i; // there can only be one element with an ID
+    clone.id = "added" + ++df; // there can only be one element with an ID
     original.parentNode.appendChild(clone);
     clone.firstElementChild.value = "";
     clone.lastElementChild.value = "";
 }
 function removefd() {
-        const element = document.getElementById("added" + i);
+        const element = document.getElementById("added" + df);
         element.remove();
-        i--;
+        df--;
 }
 // ********************************get FDs******************************************
 var Gleft=[];
@@ -172,7 +172,7 @@ function control(Gleft,Gright,relation){
     var un=0;
     if(!relation.length){
         alert("Add minimum one attribute to the Relation!");
-        res = false;
+        return false;
     }
     for(var i=0;i<Gleft.length;i++){
             un=0;
@@ -182,11 +182,11 @@ function control(Gleft,Gright,relation){
             }
             if(un){
                 if(un==1){
-                    alert("Undeclared attribute in the left hand number "+ (i+1) + "!");
+                    alert("Undeclared attribute in the left hand N° "+ (i+1) + "!");
                     res = false;
                 }
                 else{
-                    alert(un + " Undeclared attributes in the left hand number "+ (i+1) + "!");
+                    alert(un + " Undeclared attributes in the left hand N° "+ (i+1) + "!");
                     res = false;
                 }
             }
@@ -199,11 +199,11 @@ function control(Gleft,Gright,relation){
             }
             if(un){
                 if(un==1){
-                    alert("Undeclared attribute in the right hand number "+ (i+1) + "!");
+                    alert("Undeclared attribute in the right hand N° "+ (i+1) + "!");
                     res = false;
                 }
                 else{
-                    alert(un + " Undeclared attributes in the right hand number "+ (i+1) + "!");
+                    alert(un + " Undeclared attributes in the right hand N° "+ (i+1) + "!");
                     res = false;
                 }
             }
