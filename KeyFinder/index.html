@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="boody">
+    <div class="boody" id="blur">
         <div class="TITLE">Determine Keys from Functional Dependencies</div>
         <div class="relation">
             <p>Relation ( </p>
@@ -36,6 +36,32 @@
             <p>Result</p>
             <p class="outp" id="outp">["..."]</p>
         </div>
+        <button class="popupbtn" onclick="toogle()">Code Info</button>
+    </div>
+    <div id="popup">
+        <h3>Algorithme:</h3>
+        <br>
+        Length of X closure’s  ==  Relation’s length
+        <br>
+        X is a key
+        <br>
+            1-  Determine combinations of all the relation’s attributes 
+            <br>
+            2-  Start calculate closure of each combination from the
+            <br>
+             smallest to biggest combo length
+            <br>
+            3-  If we find a key we continue calculate closure of combs that
+            <br>
+             have lenght as the first key
+        <br><br>
+        <h3>Running time:</h3>
+        <br>
+        while( for ( for ) ) ↔ O( n3 )
+        <br>
+        in Closure function 
+        <br><br>
+        <button class="popupbtn" onclick="toogle()">Close</button>
     </div>
     <script src="script.js"></script>
 </body>

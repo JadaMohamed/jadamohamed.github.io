@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="boody">
+    <div class="boody" id="blur">
         <div class="TITLE">Closure of a Set of Attributes</div>
         <div class="relation">
             <p>Relation ( </p>
@@ -50,6 +50,26 @@
                 <p id="calc_res">{A,B,C,D,E}</p>
             </div>
         </div>
+        <button class="popupbtn" onclick="toogle()">Code Info</button>
+    </div>
+    <div id="popup">
+        <h3>Algorithme:</h3>
+        <br>
+        1-  Add set’s attributes to closure_inp
+        <br>
+        2-  Calculate closure for each element of it and add the result to it 
+        <br>
+        3-  while we add attribute to closure_inp repeat steps 
+        <br>
+        to see if can help to add another else break
+        <br><br>
+        <h3>Running time:</h3>
+        <br>
+        while( for ( for ) ) ↔ O( n3 )
+        <br>
+        in Closure function 
+        <br><br>
+        <button class="popupbtn" onclick="toogle()">Close</button>
     </div>
     <script src="script.js"></script>
 </body>

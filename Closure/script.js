@@ -13,25 +13,26 @@ function submitRelation() {
     var  getedrelation = document.getElementById("GetRelation").value;
     console.log("The reletion: " + getedrelation);
     relation = getedrelation.split(',').filter(element => element);
+    console.log(getedrelation);
     console.log(relation);
 }
 // ****************************Add and Remove a FD***********************************
 document.getElementById('button_add').onclick = addfd;
 document.getElementById('button_remove').onclick = removefd;
 var original = document.getElementById('funcDs');
-var df = 0;
+var i = 0;
 
 function addfd() {
     var clone = original.cloneNode(true); // "deep" clone
-    clone.id = "added" + ++df; // there can only be one element with an ID
+    clone.id = "added" + ++i; // there can only be one element with an ID
     original.parentNode.appendChild(clone);
     clone.firstElementChild.value = "";
     clone.lastElementChild.value = "";
 }
 function removefd() {
-        const element = document.getElementById("added" + df);
+        const element = document.getElementById("added" + i);
         element.remove();
-        df--;
+        i--;
 }
 // ********************************output********************************************
     const val = document.getElementById('GetSet');
@@ -108,11 +109,7 @@ function closure(Gleft,Gright,theSet)
 
 function check(tocheck,set)
 {
-    let i,n;
-    if(set.length==0)
-        n=1;
-    else
-        n=set.length;
+    let i;
     for(i=0; i<set.length; i++)
         if(tocheck === set[i])
             return  0;
@@ -124,11 +121,11 @@ function control(Gleft,Gright,theSet,relation){
     var un=0;
     if(!relation.length){
         alert("Add minimum one attribute to the Relation!");
-        return false;
+        res = false;
     }
     if(!theSet.length){
         alert("Add minimum one attribute to the Set!");
-        return false;
+        res = false;
     }
     else
         for(var i=0;i<theSet.length;i++){
@@ -154,11 +151,11 @@ function control(Gleft,Gright,theSet,relation){
         }
         if(un){
             if(un==1){
-                alert("Undeclared attribute in the left hand N° "+ (i+1) + "!");
+                alert("Undeclared attribute in the left hand number "+ (i+1) + "!");
                 res = false;
                 }
             else{
-                alert(un + " Undeclared attributes in the left hand N° "+ (i+1) + "!");
+                alert(un + " Undeclared attributes in the left hand number "+ (i+1) + "!");
                 res = false;
                 }
         }
@@ -171,14 +168,21 @@ function control(Gleft,Gright,theSet,relation){
         }
         if(un){
             if(un==1){
-                alert("Undeclared attribute in the right hand N° "+ (i+1) + "!");
+                alert("Undeclared attribute in the right hand number "+ (i+1) + "!");
                 res = false;
             }
             else{
-                alert(un + " Undeclared attributes in the right hand N° "+ (i+1) + "!");
+                alert(un + " Undeclared attributes in the right hand number "+ (i+1) + "!");
                 res = false;
             }
         }
     }
     return res;
+}
+//********************pop-up**********************
+function toogle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('active');
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
 }

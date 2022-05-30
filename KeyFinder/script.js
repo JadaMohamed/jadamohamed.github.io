@@ -17,19 +17,19 @@ function submitRelation() {
 document.getElementById('button_add').onclick = addfd;
 document.getElementById('button_remove').onclick = removefd;
 var original = document.getElementById('funcDs');
-var df = 0;
+var fd = 0;
 
 function addfd() {
     var clone = original.cloneNode(true); // "deep" clone
-    clone.id = "added" + ++df; // there can only be one element with an ID
+    clone.id = "added" + ++fd; // there can only be one element with an ID
     original.parentNode.appendChild(clone);
     clone.firstElementChild.value = "";
     clone.lastElementChild.value = "";
 }
 function removefd() {
-        const element = document.getElementById("added" + df);
+        const element = document.getElementById("added" + fd);
         element.remove();
-        df--;
+        fd--;
 }
 // ********************************get FDs******************************************
 var Gleft=[];
@@ -88,20 +88,21 @@ function closure(Gleft,Gright,Co,relation)
         return 0;
     return 1;
 }
-//*************************combinations geter**************************
+//*************************combinations getter**************************
 function getCombinations( Relation ){
     var comb = [];
-    var combinationsCount = (1 << Relation.length);
+    var combinationsCount = (1 << Relation.length); //0001 << relation.lenght(0101) = 00010101
     for (var i = 1; i < combinationsCount ; i++ , comb.push(combination) )
         for (var j=0, combination = [];j<Relation.length;j++)
-            if ((i & (1 << j)))
+            if ((i & (1 << j)))       //0001 << j(0101) = 00010101
                 combination.push(Relation[j]);
     return comb;
 }
+//************************Key Finder*************************************
 function keyfinder(Gleft,Gright,Relation){
     var keys=[];
     var outp=[];
-    if((Gleft.length==1 && Gleft[0][0]==null)|| (Gright.length==1 && Gright[0][0]==null)){
+    if((Gleft.length==1 && Gleft[0][0]==null) || (Gright.length==1 && Gright[0][0]==null)){
         keys=Array.from(Relation);
         outp[outp.length]=keys.join('');
     }
@@ -112,12 +113,11 @@ function keyfinder(Gleft,Gright,Relation){
     console.log('sorted combinations:' ); 
     console.log(sortedArr);
      for(let i=0;i<sortedArr.length;i++){
-         console.log(sortedArr[i].length);
          if(closure(Gleft,Gright,sortedArr[i],relation)){
              keys[0]=Array.from(sortedArr[i]);
-             var lengthStop=sortedArr[i].length;
+             var lengStop=sortedArr[i].length;
              var j=i+1;
-             while(sortedArr[j].length == lengthStop){
+             while(sortedArr[j].length == lengStop){
                  if(closure(Gleft,Gright,sortedArr[j],relation)){
                      console.log(j);
                      keys[keys.length]=Array.from(sortedArr[j]);
@@ -127,9 +127,8 @@ function keyfinder(Gleft,Gright,Relation){
              break;
          }
     }
-    for(i=0;i<keys.length;i++){
+    for(i=0;i<keys.length;i++)
         outp[outp.length]=keys[i].join('');
-}
     }
     console.log("keys:")
     console.log(keys);
@@ -137,22 +136,6 @@ function keyfinder(Gleft,Gright,Relation){
     console.log(outp);
     document.getElementById('outp').innerHTML='[' + outp + ']';
 }
-//*****************************************************
-// function getCombo(RELATION) {
-//     var result = [];
-//     var f = function(prefix, RELATION) {
-//       for (var i = 0; i < RELATION.length; i++) {
-//         result.push(prefix +"," +RELATION[i]);
-//         f(prefix +"," + RELATION[i], RELATION.slice(i + 1));
-//       }
-//     }
-//     f('', RELATION);
-//     var AllCombo=[];
-//     for(let i=0;i<result.length;i++){
-//         AllCombo[i]=result[i].split(',').filter(element => element);
-//     }
-//     return AllCombo;
-//   }
 //*****************************************************
 function check(tocheck,set)
 {
@@ -172,7 +155,7 @@ function control(Gleft,Gright,relation){
     var un=0;
     if(!relation.length){
         alert("Add minimum one attribute to the Relation!");
-        return false;
+        res = false;
     }
     for(var i=0;i<Gleft.length;i++){
             un=0;
@@ -182,11 +165,11 @@ function control(Gleft,Gright,relation){
             }
             if(un){
                 if(un==1){
-                    alert("Undeclared attribute in the left hand N° "+ (i+1) + "!");
+                    alert("Undeclared attribute in the left hand number "+ (i+1) + "!");
                     res = false;
                 }
                 else{
-                    alert(un + " Undeclared attributes in the left hand N° "+ (i+1) + "!");
+                    alert(un + " Undeclared attributes in the left hand number "+ (i+1) + "!");
                     res = false;
                 }
             }
@@ -199,14 +182,37 @@ function control(Gleft,Gright,relation){
             }
             if(un){
                 if(un==1){
-                    alert("Undeclared attribute in the right hand N° "+ (i+1) + "!");
+                    alert("Undeclared attribute in the right hand number "+ (i+1) + "!");
                     res = false;
                 }
                 else{
-                    alert(un + " Undeclared attributes in the right hand N° "+ (i+1) + "!");
+                    alert(un + " Undeclared attributes in the right hand number "+ (i+1) + "!");
                     res = false;
                 }
             }
         }
     return res;
 }
+//********************pop-up**********************
+function toogle(){
+    var blur = document.getElementById('blur');
+    blur.classList.toggle('active');
+    var popup = document.getElementById('popup');
+    popup.classList.toggle('active');
+}
+//*****************************************************
+// function getCombo(RELATION) {
+//     var result = [];
+//     var f = function(prefix, RELATION) {
+//       for (var i = 0; i < RELATION.length; i++) {
+//         result.push(prefix +"," +RELATION[i]);
+//         f(prefix +"," + RELATION[i], RELATION.slice(i + 1));
+//       }
+//     }
+//     f('', RELATION);
+//     var AllCombo=[];
+//     for(let i=0;i<result.length;i++){
+//         AllCombo[i]=result[i].split(',').filter(element => element);
+//     }
+//     return AllCombo;
+//   }
