@@ -108,7 +108,8 @@ function decompose(Gleft,Gright,Re){
         j=i=0;
         document.getElementById('outp').innerHTML =''; //cus we did += to innerHTML underneath
         while(i!=Rs.length){
-            document.getElementById('outp').innerHTML += ' R' + ++j + '(' + Rs[i++] + ') ';
+            document.getElementById('outp').innerHTML += ' R' + ++j + '(' + Rs[i] + ') ';
+            i++;
         }
     }
     else{
@@ -195,11 +196,4 @@ function control(Gleft,Gright,relation){
             }
         }
     return res;
-}
-//********************pop-up**********************
-function toogle(){
-    var blur = document.getElementById('blur');
-    blur.classList.toggle('active');
-    var popup = document.getElementById('popup');
-    popup.classList.toggle('active');
 }

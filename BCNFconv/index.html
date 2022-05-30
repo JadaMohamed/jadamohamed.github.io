@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="boody" id="blur">
+    <div class="boody">
         <div class="TITLE">BCNF Decomposition</div>
         <div class="relation">
             <p>Relation ( </p>
@@ -20,9 +19,9 @@
             <div class="title"><p>Function dependency</p></div>
             <div>
                 <div class="fd" id="funcDs">
-                    <input class="left_" id="left_" type="text" placeholder="A,B">
+                    <input class="left_" id="left_" type="text" placeholder="A,B"  >
                     <img src="images/determine.png" style="width: 20px;" title="Determine">
-                    <input class="right_" id="right_" type="text" placeholder="C,D,E">
+                    <input class="right_" id="right_" type="text" placeholder="C,D,E" >
                 </div>
             </div>
             <div class="fd_input_wrap">
@@ -37,29 +36,6 @@
             <p>Result</p>
             <div class="outp" style="display: flex;"><p id="outp">R(...)</p></div>
         </div>
-        <button class="popupbtn" onclick="toogle()">Code Info</button>
-    </div>
-    
-    <div id="popup">
-        <h3>Algorithme:</h3>
-        <br>
-        Each left hand side of the DFs must be a super key
-        <br>
-		X→Y     (X must be a super key)
-        <br>
-	    1-  If X is not a super key
-        <br>
-		2-  decompose R into XY & R-{Y}
-        <br>
-	    2’-  else if all the left hands is a super keys R is already in BCNF
-        <br><br>
-        <h3>Running time:</h3>
-        <br>
-        while( for ( for ) ) ↔ O( n3 )
-        <br>
-        in Closure function 
-        <br><br>
-        <button class="popupbtn" onclick="toogle()">Close</button>
     </div>
     <script src="script.js"></script>
 </body>
