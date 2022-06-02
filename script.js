@@ -1,29 +1,31 @@
-var li_elements = document.querySelectorAll(".leftSide ul a li");
-var item_elements = document.querySelectorAll(".item");
-for(var i = 0; i < li_elements.length ; i++ ){
-    li_elements[i].addEventListener("click", function(){
-        li_elements.forEach(function(li){
-            li.classList.remove("active");
-        })
-        this.classList.add("active");
-        var li_value = this.getAttribute("data-li");
-        item_elements.forEach(function(item){
-            item.style.display="none";
-        })    
-        if(li_value == "aboutme"){
-            document.querySelector("." + li_value).style.display='block';
-        }
-        else if(li_value == "education"){
-            document.querySelector("." + li_value).style.display='block';
-        }
-        else if(li_value == "skills"){
-            document.querySelector("." + li_value).style.display='block';
-        }
-        else if(li_value == "hobbies"){
-            document.querySelector("." + li_value).style.display='block';
-        }
-        else if(li_value == "projects"){
-            document.querySelector("." + li_value).style.display='block';
-        }
-    })
+/*window.onload = () => {
+    const tab_switchers = document.querySelectorAll('[data-switcher]');
+
+    for (let i = 0; i < tab_switchers.length; i++) {
+        const tab_switcher = tab_switchers[i];
+        const page_id = tab_switcher.dataset.tab;
+
+        tab_switcher.addEventListener('click', () => {
+            document.querySelector('.tabs .tab.is-active').classList.remove('is-active');
+            tab_switcher.parentNode.classList.add('is-active');
+
+            SwitchPage(page_id);
+        });
+    }
+}
+
+function SwitchPage (page_id) {
+    console.log(page_id);
+
+    const current_page = document.querySelector('.pages .page.is-active');
+    current_page.classList.remove('is-active');
+
+    const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
+    next_page.classList.add('is-active');
+}*/
+function toggleMenu(){
+    let bar =document.querySelector('.navigationbar');
+    let toggle =document.querySelector('.toggle');
+    bar.classList.toggle('active');
+    toggle.classList.toggle('active');
 }

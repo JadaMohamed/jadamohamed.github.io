@@ -15,26 +15,26 @@
     </nav>
     <div class="navigationbar">
         <ul class="tabs">
-            <li class="tab is-active">
-                <a href="#" data-switcher data-tab="1">
+            <li class="tab ">
+                <a href="https://jadamohamed.github.io" >
                     <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
                     <span class="title">Home</span>
                 </a>
             </li>
-            <li class="tab">
-                <a href="https://jadamohamed.github.io/sections">
+            <li class="tab is-active">
+                <a href="#" data-switcher data-tab="2">
                     <span class="icon"><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
                     <span class="title">Sections</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#" data-switcher data-tab="2">
+                <a href="#" data-switcher data-tab="3">
                     <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span>
                     <span class="title">Settings</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#" data-switcher data-tab="3">
+                <a href="#" data-switcher data-tab="4">
                     <span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <span class="title">Favorite</span>
                 </a>
@@ -43,7 +43,9 @@
     </div>
     <main>
         <section class="pages">
-            <div class="page home is-active">
+
+
+            <div class="page home " data-page="1">
                 <div class="about">
                     <h3>
                         We save TIME
@@ -61,11 +63,11 @@
                     <div class="cards">
                     <div class="card">
                         <div class="path">
-                        <a href="https://jadamohamed.github.io/sections">
+                        <a href="#">
                             sections
                         </a>
                         >
-                        <a href="https://jadamohamed.github.io/sections ">
+                        <a href="#">
                             Database tools
                         </a>
                         >
@@ -77,11 +79,11 @@
                     </div>
                     <div class="card">
                         <div class="path">
-                            <a href="https://jadamohamed.github.io/sections">
+                            <a href="#">
                                 sections
                             </a>
                             >
-                            <a href="https://jadamohamed.github.io/sections">
+                            <a href="#">
                                 Database tools
                             </a>
                             >
@@ -90,29 +92,54 @@
                         <div class="info">
                             Candidate Key is minimal set of attributes of a relation which can be used to identify a tuple uniquely.
                         </div>
-                        
                     </div>
                     <div class="card">
                         Upcoming...
                     </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="page sections is-active" data-page="2">
                 <div class="sides">
+
+                    <div class="side"> 
+                        <div class="category">
+                            <i class="fa fa-database" aria-hidden="true"></i>               
+                            <h2>Database tools</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">Closure of set of attributes</a>
+                            </li>
+                            <li>
+                                <a href="#">Find candidate Key</a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="side">
-                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This is a beta version of the web site. Still under maintenance
+                        <div class="category">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <h2>Upcoming...</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="page settings" data-page="2">
+            <div class="page settings" data-page="3">
                 <h2></h2>
                 <p>Upcoming...</p>
             </div>
-            <div class="page favorite" data-page="3">
+            <div class="page favorite" data-page="4">
                 <h2></h2>
                 <p>Upcoming...</p>
             </div>
         </section>
     </main>
+
+    </section>
+
     <footer>
         <div class="footer-content">
             <h3>CALCEV</h3>
@@ -128,7 +155,7 @@
                 Copyright &copy;2022 CALCEV. designed by <span>MEEDJ</span>
             </div>
     </footer>
-
     <script src="script.js"></script>
+    <!-- <script src="JS/main.js"></script> -->
 </body>
 </html>

@@ -15,26 +15,26 @@
     </nav>
     <div class="navigationbar">
         <ul class="tabs">
-            <li class="tab is-active">
-                <a href="#" data-switcher data-tab="1">
+            <li class="tab ">
+                <a href="https://jadamohamed.github.io">
                     <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
                     <span class="title">Home</span>
                 </a>
             </li>
-            <li class="tab">
+            <li class="tab is-active">
                 <a href="https://jadamohamed.github.io/sections">
                     <span class="icon"><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
                     <span class="title">Sections</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#" data-switcher data-tab="2">
+                <a href="#" >
                     <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span>
                     <span class="title">Settings</span>
                 </a>
             </li>
             <li class="tab">
-                <a href="#" data-switcher data-tab="3">
+                <a href="#" data-switcher data-tab="4">
                     <span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
                     <span class="title">Favorite</span>
                 </a>
@@ -43,7 +43,9 @@
     </div>
     <main>
         <section class="pages">
-            <div class="page home is-active">
+
+
+            <div class="page home " data-page="1">
                 <div class="about">
                     <h3>
                         We save TIME
@@ -61,11 +63,11 @@
                     <div class="cards">
                     <div class="card">
                         <div class="path">
-                        <a href="https://jadamohamed.github.io/sections">
+                        <a href="#">
                             sections
                         </a>
                         >
-                        <a href="https://jadamohamed.github.io/sections ">
+                        <a href="#">
                             Database tools
                         </a>
                         >
@@ -77,11 +79,11 @@
                     </div>
                     <div class="card">
                         <div class="path">
-                            <a href="https://jadamohamed.github.io/sections">
+                            <a href="#">
                                 sections
                             </a>
                             >
-                            <a href="https://jadamohamed.github.io/sections">
+                            <a href="#">
                                 Database tools
                             </a>
                             >
@@ -90,29 +92,90 @@
                         <div class="info">
                             Candidate Key is minimal set of attributes of a relation which can be used to identify a tuple uniquely.
                         </div>
-                        
                     </div>
                     <div class="card">
                         Upcoming...
                     </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="page sections is-active" data-page="2">
                 <div class="sides">
-                    <div class="side">
-                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> This is a beta version of the web site. Still under maintenance
+
+                    <div class="sidel">
+                        <div class="boody">
+                            <div class="TITLE">Determine Keys from Functional Dependencies</div>
+                            <div class="relation">
+                                <p>Relation ( </p>
+                                <input type="text" id="GetRelation" placeholder="A,B,C,D,E" title="Add Relation's attributes separating with ','">
+                                <p> );</p> 
+                            </div>
+                            <div class="function_dep">
+                                <div class="title"><p>Function dependency</p></div>
+                                <div>
+                                    <div class="fd" id="funcDs">
+                                        <input class="left_" id="left_" type="text" placeholder="A,B" >
+                                        <i class="fa fa-arrow-right" aria-hidden="true" title="Determine"></i>
+                                        <input class="right_" id="right_" type="text" placeholder="C,D,E">
+                                    </div>
+                                </div>
+                                <div class="fd_input_wrap">
+                                    <button id="button_add" onclick="addfd()"><i class="fa fa-plus-square" aria-hidden="true"  style="font-size: 1.5rem;" title="Add functional dependency"></i></button>
+                                    <button id="button_remove" onlick="removefd()"><i class="fa fa-minus-square" aria-hidden="true" style="font-size: 1.5rem;" title="Remove functional dependency"></i></button>
+                                </div>
+                                <div class="calculate">
+                                    <button onclick="calculate()">Find Key(s)</button>
+                                </div>
+                            </div>
+                            <div class="result">
+                                <p>Result</p>
+                                <p class="outp" id="outp">["..."]</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sider"> 
+                        <div class="category">
+                            <i class="fa fa-database" aria-hidden="true"></i>               
+                            <h2>Database tools</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">Closure of set of attributes</a>
+                            </li>
+                            <li>
+                                <a href="#">Find candidate Key</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
+                <div class="sides clacInfo">
+                    <p class="title"> How To Find a candidate key</p>
+                    <div class="paragra">
+                        A candidate key is a single or group of multiple keys that uniquely identify rows in a table. A candidate key is also called a super key without redundancy. A candidate key is not reducible further. The minimum set of attributes is used to uniquely differentiate the record of the table that you called a candidate key. <br>
+                            <div class="soupara">
+                                <li>A candidate key can never be NULL or EMPTY and its value should be unique.</li>
+                                <li>There can be more than one candidate key to a table.</li> 
+                                <li>A candidate key can be a combination of more than one attribute.</li> 
+                            </div>
+                        </div>
+                </div>
+            
             </div>
-            <div class="page settings" data-page="2">
+            <div class="page settings" data-page="3">
                 <h2></h2>
                 <p>Upcoming...</p>
             </div>
-            <div class="page favorite" data-page="3">
+            <div class="page favorite" data-page="4">
                 <h2></h2>
                 <p>Upcoming...</p>
             </div>
         </section>
     </main>
+    </section>
+    
     <footer>
         <div class="footer-content">
             <h3>CALCEV</h3>
@@ -128,7 +191,6 @@
                 Copyright &copy;2022 CALCEV. designed by <span>MEEDJ</span>
             </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

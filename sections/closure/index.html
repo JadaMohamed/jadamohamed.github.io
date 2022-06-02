@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCEV</title>
+    <script src="https://kit.fontawesome.com/a671792307.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <label class="Logo"><a href="#"><img src="images/logo.png"></a></label>
+        <div class="toggle" onclick="toggleMenu()"></div>
+    </nav>
+    <div class="navigationbar">
+        <ul class="tabs">
+            <li class="tab ">
+                <a href="https://jadamohamed.github.io">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="tab is-active">
+                <a href="https://jadamohamed.github.io/sections">
+                    <span class="icon"><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
+                    <span class="title">Sections</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#" >
+                    <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="#" data-switcher data-tab="4">
+                    <span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="title">Favorite</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="pages">
+
+
+            <div class="page home " data-page="1">
+                <div class="about">
+                    <h3>
+                        We save TIME
+                    </h3>
+                    <p>
+                        A Website that can help people in different fields <br>
+                        in shortening time and solving problems of calculation
+                    </p>
+                    <button class="btn">Discover more</button>
+                </div>
+                <div class="lastadded">
+                    <h4>
+                        Last added
+                    </h4>
+                    <div class="cards">
+                    <div class="card">
+                        <div class="path">
+                        <a href="#">
+                            sections
+                        </a>
+                        >
+                        <a href="#">
+                            Database tools
+                        </a>
+                        >
+                        <a href="#">Calculate Closure</a>
+                        </div>
+                        <div class="info">
+                            The closure of a set of attributes X is the set of those attributes that can be functionally determined from X. The closure of X is denoted as X+.
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="path">
+                            <a href="#">
+                                sections
+                            </a>
+                            >
+                            <a href="#">
+                                Database tools
+                            </a>
+                            >
+                            <a href="#">Find Candidate Key</a>
+                            </div>
+                        <div class="info">
+                            Candidate Key is minimal set of attributes of a relation which can be used to identify a tuple uniquely.
+                        </div>
+                    </div>
+                    <div class="card">
+                        Upcoming...
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page sections is-active" data-page="2">
+                <div class="sides">
+
+                    <div class="sidel">
+                        <div class="boody" id="blur">
+                            <div class="TITLE">Closure of a Set of Attributes</div>
+                            <div class="relation">
+                                <p>Relation ( </p>
+                                <input type="text" id="GetRelation" placeholder="A,B,C,D,E" title="Add Relation's attributes separated with ','">
+                                <p> );</p> 
+                            </div>
+                            <div class="function_dep">
+                                <div class="title"><p>Function dependency</p></div>
+                                <div>
+                                    <div class="fd" id="funcDs">
+                                        <input class="left_" id="left_" type="text" placeholder="A,B">
+                                        <i class="fa fa-arrow-right" aria-hidden="true" title="Determine"></i>
+                                        <input class="right_" id="right_" type="text" placeholder="C,D,E">
+                                    </div>
+                                </div>
+                                <div class="fd_input_wrap">
+                                    <button id="button_add" onclick="addfd()"><i class="fa fa-plus-square" aria-hidden="true"  style="font-size: 1.5rem;" title="Add functional dependency"></i></button>
+                                    <button id="button_remove" onlick="removefd()"><i class="fa fa-minus-square" aria-hidden="true" style="font-size: 1.5rem;" title="Remove functional dependency"></i></button>
+                                </div>
+                            </div>
+                            <div class="the_set">
+                                <div class="set">
+                                    <p>Set {</p>
+                                    <input type="text" id="GetSet"  placeholder="A,B" title="Add Set's attributes separated with ','">
+                                    <div style="display: flex;">
+                                        <p>}</p>
+                                        <sup>+</sup>
+                                    </div>
+                                </div>
+                                <button class="Calculate" onclick="calculate()">Calculate</button>
+                            </div>
+                            <div class="result">
+                                <p style="user-select: none;">Result</p>
+                                <div class="outp">
+                                    <div class="inp"><p>{</p>
+                                        <div id="GetedSet">A,B</div>
+                                        }<sup style="padding-right: 8px;">+</sup>=
+                                    </div>
+                                    <p id="calc_res">{A,B,C,D,E}</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    <div class="sider"> 
+                        <div class="category">
+                            <i class="fa fa-database" aria-hidden="true"></i>               
+                            <h2>Database tools</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#">Closure of set of attributes</a>
+                            </li>
+                            <li>
+                                <a href="#">Find candidate Key</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sides clacInfo">
+                    <p class="title"> How To Find the Closure of a Set of Attributes</p>
+                    <p class="paragra">
+                        The closure of a set of attributes X is the set of those attributes that can be functionally determined from X. The closure of X is denoted as X+. <br> <br>
+                        When given a closure problem, you’ll have a set of functional dependencies over which to compute the closure and the set X for which to find the closure. A functional dependency A1, A2, …, An -> B in a table holds if two records that have the same value of attributes A1, A2, …, An also have the same value for attribute B.
+                        The closure of X is the set of all attributes such that two records that have the same value of X also have the same value of X+.
+                    </p>
+                </div>
+            
+            </div>
+            <div class="page settings" data-page="3">
+                <h2></h2>
+                <p>Upcoming...</p>
+            </div>
+            <div class="page favorite" data-page="4">
+                <h2></h2>
+                <p>Upcoming...</p>
+            </div>
+        </section>
+    </main>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>CALCEV</h3>
+            <p>do not hesitate to contact us to report any problem you encountered</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+            <div class="footer-bottom">
+                Copyright &copy;2022 CALCEV. designed by <span>MEEDJ</span>
+            </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
