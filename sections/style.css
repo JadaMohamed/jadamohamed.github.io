@@ -236,6 +236,7 @@ footer{
     height: auto;
     padding-top: 10px;
     margin-top: 200px;
+    bottom: 0;
 }
 .footer-content{
     align-items: center;
