@@ -5,9 +5,25 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif; 
 }
+:root{
+    --primary-color: #062C30 ;
+    --secondary-color: #05595B ;
+    --ther-color: #F5F5F5 ;
+    --fourth-color: #2eb3b5 ;
+    --five-color:  #91d5d6;
+}
+
+.light-mode{
+    --primary-color: #F5F5F5 ;
+    --secondary-color: #05595B ;
+    --ther-color: #062C30 ;
+    --fourth-color: #206b6c ;
+    --five-color: #05595B ;
+}
 body{
     min-height: 100vh;
-    background: #062C30;
+    background: var(--primary-color);
+    transition: 1s ease;
 }
 .navigationbar{
     top: 60px;
@@ -117,7 +133,7 @@ main{
 .pages{
     /* margin-top: 8%; */
     padding: 2% 2%;
-    color: #F5F5F5;
+    color: var(--ther-color);
 }
 .pages .page{
     display: none;
@@ -144,7 +160,7 @@ main{
     text-transform: uppercase;
 }
 .home .about p{
-    color: #2eb3b5;
+    color: var(--fourth-color);
 }
 .home .btn{
     cursor: pointer;
@@ -152,14 +168,14 @@ main{
     padding: 0.2rem;
     border: none;
     background: transparent;
-    border: 1px solid #2eb3b5 ;
-    color: #2eb3b5;
+    border: 1px solid var(--fourth-color) ;
+    color: var(--fourth-color);
     transition: 0.4s;
 }
 .home .btn:hover{
     background: #05595B;
-    color: #062C30;
-    border-color: #05595B;
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 .hom .lastadded{
     align-items: center;
@@ -175,13 +191,13 @@ main{
 font-size: .7rem;
  width: 300px;
  min-height: 100px;
- border: 1px solid #05595B;
+ border: 1px solid var(--secondary-color);
  border-radius: 8px;
  margin: 1rem 1rem;
  padding: .6rem 1rem;
 }
 .home .lastadded .card a{
-    color: #2eb3b5;
+    color: var(--fourth-color);
 }
 
 .sides{
@@ -201,7 +217,7 @@ padding-right: 1rem;
 min-width: 30%;
 max-width: 100%;
 min-height: 100px;
-border: 1px solid #05595B;
+border: 1px solid var(--secondary-color);
 border-radius: 8px;
 margin: 1rem 1rem;
 padding: .6rem 1rem;
@@ -210,7 +226,7 @@ padding: .6rem 1rem;
 padding-left: 2rem;
 }
 .sections .sides .sider ul a{
-color: #2eb3b5;
+color: var(--fourth-color);
 transition: .2s;
 }
 .sections .sides .sider ul a:hover{
@@ -220,11 +236,10 @@ filter: brightness(50%);
 .sections .sides .sidel {
     min-width: 60%;
     max-width: 100%;
-    border: 1px solid #05595B;
+    border: 1px solid var(--secondary-color);
     border-radius: 8px;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -254,7 +269,7 @@ filter: brightness(50%);
 .TITLE{
     user-select: none;
     font-size: 1.5rem;
-    color: #2eb3b5;
+    color: var(--fourth-color);
     padding-bottom: 1rem;
 }
 /* the relation section */
@@ -269,20 +284,20 @@ filter: brightness(50%);
     font-family: Abel;
     font-size: 1.5rem;
     justify-content: space-around;
-    color: #2eb3b5;
+    color: var(--fourth-color);
 
 }
 .relation input{
-    color: #090b3f;
+    color: var(--primary-color);
     width: 60%;
     height: 60%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #91d5d6;
+    border: 1px solid var(--five-color);
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #91d5d6;
+    background-color: var(--five-color);
     font-family: Poppins;
 }
 /* the functions dependency section */
@@ -297,7 +312,7 @@ filter: brightness(50%);
     font-family: Abel;
     font-size: 1.5rem;
     justify-content: space-around;
-    color: #2eb3b5;
+    color: var(--fourth-color);
 }
 .function_dep .fd{
     display: flex;
@@ -306,15 +321,15 @@ filter: brightness(50%);
     justify-content: space-evenly;
 }
 .fd input{
-    color: #090b3f;
+    color: var(--primary-color);
     width: 25%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #91d5d6;
+    border: 1px solid var(--five-color);
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #91d5d6;
+    background-color: var(--five-color);
     font-family: Poppins;
 }
 .fd_input_wrap{
@@ -325,8 +340,9 @@ filter: brightness(50%);
     justify-content: center;
     cursor: pointer;
     background-color: transparent;
-    color: #91d5d6;
+    color: var(--five-color);
     border: none;
+    transition: .3s;
 }
 .fd_input_wrap button:hover{
     filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
@@ -344,20 +360,20 @@ filter: brightness(50%);
     font-family: Abel;
     font-size: 1.5rem;
     justify-content: space-around;
-    color: #2eb3b5;
-
+    color: var(--fourth-color);
+    transition: .3s;
 }
 .the_set input{
-    color: #090b3f;
+    color: var(--primary-color);
     width: 60%;
     height: 60%;
     padding: 12px 20px;
     margin: 15px auto;
     display: inline-block;
-    border: 1px solid #91d5d6;
+    border: 1px solid var(--five-color);
     border-radius: 5px;
     box-sizing: border-box;
-    background-color: #91d5d6;
+    background-color: var(--five-color);
     font-family: Poppins;
 }
 .set{
@@ -371,9 +387,11 @@ filter: brightness(50%);
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    background-color: #91d5d6;
+    background-color: var(--five-color);
     border: none;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--primary-color);
+    transition: .3s;
+
 }
 .the_set button:hover{
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
@@ -391,7 +409,7 @@ filter: brightness(50%);
     font-family: Abel;
     font-size: 1.5rem;
     justify-content: space-around;
-    color: #2eb3b5;
+    color: var(--fourth-color);
     padding-bottom: 10px;
 }
 .outp{
@@ -411,10 +429,10 @@ filter: brightness(50%);
 }
 .clacInfo .title{
     font-size: 1.5rem;
-    color: #2eb3b5;
+    color: var(--fourth-color);
 }
 .clacInfo .paragra{
-    color: #91d5d6;
+    color: var(--five-color);
 }
 /* **************** */
 footer{
@@ -430,7 +448,7 @@ footer{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #062C30;
+    color: var(--primary-color);
 }
 .footer-content h3{
     font-size: 1.4rem;
@@ -457,7 +475,7 @@ footer{
 }
 .socials a{
     font-size: 1.4rem;
-    color: #062C30;
+    color: var(--primary-color);
     transition: .4s ease;
 }
 .socials a:hover{
@@ -468,4 +486,26 @@ footer{
     padding: 10px 0;
     text-align: center;
     color: #206b6c;
+}
+/*********/
+.DLmode{
+    justify-content: center ;
+    text-align: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.DLmode img{
+    filter: contrast(40%);
+    transition: .4s ease-out;
+}
+.DLmode img:hover{
+    filter: contrast(0%);
 }

@@ -1,31 +1,47 @@
-/*window.onload = () => {
-    const tab_switchers = document.querySelectorAll('[data-switcher]');
-
-    for (let i = 0; i < tab_switchers.length; i++) {
-        const tab_switcher = tab_switchers[i];
-        const page_id = tab_switcher.dataset.tab;
-
-        tab_switcher.addEventListener('click', () => {
-            document.querySelector('.tabs .tab.is-active').classList.remove('is-active');
-            tab_switcher.parentNode.classList.add('is-active');
-
-            SwitchPage(page_id);
-        });
-    }
-}
-
-function SwitchPage (page_id) {
-    console.log(page_id);
-
-    const current_page = document.querySelector('.pages .page.is-active');
-    current_page.classList.remove('is-active');
-
-    const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
-    next_page.classList.add('is-active');
-}*/
 function toggleMenu(){
     let bar =document.querySelector('.navigationbar');
     let toggle =document.querySelector('.toggle');
     bar.classList.toggle('active');
     toggle.classList.toggle('active');
+}
+
+ //
+
+if (localStorage.getItem('light-mode')===null){
+    localStorage.setItem('light-mode', "false");
+}
+
+checkStatus()
+
+function checkStatus(){
+    var elem= document.getElementById('DL');
+    if (localStorage.getItem('light-mode')==="true"){
+        document.body.classList.add('light-mode');
+        elem.src="images/moon.png";
+    }else{
+        document.body.classList.remove('light-mode');
+        elem.src="images/sun.png" ;
+    }
+}
+
+function DL(){
+    var elem= document.getElementById('DL');
+     document.body.classList.toggle('light-mode');
+    if(document.body.classList.contains('light-mode')){
+        elem.src="images/moon.png";
+    }
+     else{
+         elem.src="images/sun.png" ;
+     }
+ }
+
+
+function changeStatus(){                                           
+    if (localStorage.getItem('light-mode')==="true"){
+        localStorage.setItem('light-mode', "false");
+        DL();
+    } else{
+        localStorage.setItem('light-mode', "true");
+        DL();
+    }
 }
