@@ -42,3 +42,6 @@ function toggleMenu(){
     bar.classList.toggle('active');
     toggle.classList.toggle('active');
 }
+function comming(){
+    alert('Comming soon !');
+}

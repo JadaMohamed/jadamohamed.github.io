@@ -24,6 +24,8 @@ body{
     min-height: 100vh;
     background: var(--primary-color);
     transition: 1s ease;
+    display: flex;
+    flex-direction: column;
 }
 .navigationbar{
     top: 60px;
@@ -37,7 +39,7 @@ body{
 .navigationbar:hover,
 .navigationbar.active
 {
-    width: 300px;
+    width: 180px;
 }
 .navigationbar ul{
     position: absolute;
@@ -251,7 +253,7 @@ footer{
     background: var(--secondary-color);
     height: auto;
     padding-top: 10px;
-    margin-top: 200px;
+    margin-top: auto;
     bottom: 0;
 }
 .footer-content{

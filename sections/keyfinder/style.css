@@ -37,7 +37,7 @@ body{
 .navigationbar:hover,
 .navigationbar.active
 {
-    width: 300px;
+    width: 180px;
 }
 .navigationbar ul{
     position: absolute;

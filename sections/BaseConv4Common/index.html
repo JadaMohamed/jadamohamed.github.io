@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/favCALCEV.png">
+    <title>CALCEV</title>
+    <script src="https://kit.fontawesome.com/a671792307.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <label class="Logo"><a href="https://jadamohamed.github.io"><img src="images/logo.png"></a></label>
+        <div class="toggle" onclick="toggleMenu()"></div>
+    </nav>
+    <div class="navigationbar">
+        <ul class="tabs">
+            <li class="tab ">
+                <a href="https://jadamohamed.github.io">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="tab is-active">
+                <a href="https://jadamohamed.github.io/sections">
+                    <span class="icon"><i class="fa fa-calculator" aria-hidden="true"></i></span>
+                    <span class="title">Sections</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href=""  onclick="comming()">
+                    <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="" onclick="comming()">
+                    <span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="title">Favorite</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="pages">
+
+            <div class="page sections is-active" data-page="2">
+                <div class="sides">
+
+                    <div class="sidel">
+                        <div class="content">
+                            <div class="bases">
+                                <div class="base">
+                                    <div class="Type">Binary</div>
+                                    <input type="text" name="" id="B2" placeholder="base 2">
+                                    <div class="tooltip">
+                                        <button onclick="myFunction(2)" onmouseout="outFunc(2)">
+                                          <span class="tooltiptext" id="myTooltip2">Copy to clipboard</span>
+                                          Copy
+                                          </button>
+                                    </div>
+                                </div>
+                                <div class="base">
+                                    <div class="Type">Octal</div>
+                                    <input type="text" name="" id="B8" placeholder="base 8">
+                                    <div class="tooltip">
+                                        <button onclick="myFunction(8)" onmouseout="outFunc(8)">
+                                          <span class="tooltiptext" id="myTooltip8">Copy to clipboard</span>
+                                          Copy
+                                          </button>
+                                    </div>
+                                </div>
+                                <div class="base">
+                                    <div class="Type">Hexadecimal</div>
+                                    <input type="text" name="" id="B16" placeholder="base 16">
+                                    <div class="tooltip">
+                                        <button onclick="myFunction(16)" onmouseout="outFunc(16)">
+                                          <span class="tooltiptext" id="myTooltip16">Copy to clipboard</span>
+                                          Copy
+                                          </button>
+                                    </div>
+                                </div>
+                                <div class="base">
+                                    <div class="Type">Decimal</div>
+                                    <input type="text" name="" id="B10" placeholder="base 10">
+                                    <div class="tooltip">
+                                        <button onclick="myFunction(10)" onmouseout="outFunc(10)">
+                                          <span class="tooltiptext" id="myTooltip10">Copy to clipboard</span>
+                                          Copy
+                                          </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btns">
+                            <button onclick="convert()"><i class="fa fa-exchange" aria-hidden="true"></i> Convert</button>
+                            <button onclick="rest()"><i class="fa fa-retweet" aria-hidden="true"></i> Rest</button>
+                        </div>
+                </div>
+                    <div class="sider"> 
+                        <div class="category">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>              
+                            <h2>Number convertion</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="https://jadamohamed.github.io/sections/BaseConv4Common" title="Convert from/to binary, octal, hexadecimal, decimal">Base converter(B,O,H,D)</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sides clacInfo">
+                    <p class="title"> Base numbers/Common bases</p>
+                    <p class="paragra">
+                        <strong>Binary :</strong> 
+                        <br>
+                         Binary is base 2. It's a favorite among computer programmers. It has just two digits: 0 and 1.
+                         <br>
+                         <strong>Octal :</strong> 
+                         <br>
+                         Octal is base 8. It was also quite liked by programmers because the octal representation of numbers is 3 times shorter than the binary one and the conversion from octal to binary and back is very easy .
+                         <br>
+                        <strong>Decimal :</strong> 
+                        <br>
+                         Decimal is base 10. It's the base that everyone knows and loves. Most numbers in the world are written without a specified radix and usually it can just be assumed that they are in base 10. The most commonly used explanation for the origin of base 10 for our number system is the number of fingers we have.
+                        <br>
+                        <strong>Hexadecimal :</strong>
+                        <br>
+                        Hexadecimal is base 16. The digits in hexadecimal are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, and F. One of its common uses is for color charts. Hexadecimal numbers are also used by programmers in the same way as octal numbers, but to learn to count in hexadecimal is harder than in octal.
+                        </p>
+                </div>
+            
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>CALCEV</h3>
+            <p>do not hesitate to contact us to report any problem you encountered</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+            <div class="footer-bottom">
+                Copyright &copy;2022 CALCEV. designed by <span>MEEDJ</span>
+            </div>
+    </footer>
+    <div class="DLmode" onclick="changeStatus()">
+        <img src="images/sun.png" style="width: 24px; padding-top: 19%;" id="DL">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
