@@ -142,7 +142,7 @@ main{
 .pages .page.is-active{
     display: block;
 }
-
+/* ******************************************* */
 .sides{
     min-width: 100%;
     display: flex;
@@ -212,7 +212,7 @@ filter: brightness(50%);
     border-radius: 8px;
     padding: 8px 12px;
 }
-.clacInfo .title{
+.clacInfo .titlei{
     font-size: 1.5rem;
     color: var(--fourth-color);
 }
@@ -297,10 +297,11 @@ footer{
 .content{
     align-items: center;
     width: 100%;
+    padding-top: 15px;
 }
 .content input{
     color: var(--primary-color);
-    width: 75%;
+    width: 80%;
     height: 60%;
     padding: 12px 20px;
     margin: 15px auto;
@@ -311,19 +312,43 @@ footer{
     background-color: var(--five-color);
     font-family: Poppins;
 }
-.content{
-    padding-top: 8px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+.content select {
+    color: var(--primary-color);
+    width: 80%;
+    height: 60%;
+    padding: 12px 20px;
+    margin: 15px auto;
+    display: inline-block;
+    border: 1px solid var(--five-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--five-color);
+    font-family: Poppins;
 }
+.paragra span{
+    padding-left: 2%;
+}
+.content textarea {
+    color: var(--primary-color);
+    max-width: 80%;
+    height: 60%;
+    padding: 12px 20px;
+    margin: 15px auto;
+    display: inline-block;
+    border: 1px solid var(--five-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--five-color);
+    font-family: Poppins;
+}
+  
 button:hover{
     filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
 }
-.base .Type{
+.titlee{
     font-size: 1rem;
     color: var(--fourth-color);
+    padding-left: 10%;
 }
 button{
     cursor: pointer;
@@ -336,11 +361,12 @@ button{
 }
 .btns{
     padding-bottom: 8px;
-    text-align: center;
 }
 .tooltip {
     position: relative;
     display: inline-block;
+    padding-left: 10%;
+    padding-bottom: 8px;
   }
   
 .tooltip .tooltiptext {
@@ -374,3 +400,13 @@ button{
     visibility: visible;
     opacity: 1;
   }
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
