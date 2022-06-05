@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/favCALCEV.png">
+    <title>CALCEV</title>
+    <script src="https://kit.fontawesome.com/a671792307.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <label class="Logo"><a href="https://jadamohamed.github.io"><img src="images/logo.png"></a></label>
+        <div class="toggle" onclick="toggleMenu()"></div>
+    </nav>
+    <div class="navigationbar">
+        <ul class="tabs">
+            <li class="tab ">
+                <a href="https://jadamohamed.github.io">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Home</span>
+                </a>
+            </li>
+            <li class="tab is-active">
+                <a href="https://jadamohamed.github.io/sections">
+                    <span class="icon"><i class="fa fa-calculator" aria-hidden="true"></i></span>
+                    <span class="title">Sections</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href=""  onclick="comming()">
+                    <span class="icon"><i class="fa fa-sliders" aria-hidden="true"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+            </li>
+            <li class="tab">
+                <a href="" onclick="comming()">
+                    <span class="icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    <span class="title">Favorite</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <section class="pages">
+
+            <div class="page sections is-active" data-page="2">
+                <div class="sides">
+
+                    <div class="sidel">
+                        <div class="content">
+                            <div class="field">
+                                <label class="titlee">Select Base: </label>
+                                <select id="bases" name="bases">
+                                <option value="2">Base 2 (Binary)</option>
+                                <option value="3">Base 3</option>
+                                <option value="4">Base 4</option>
+                                <option value="5">Base 5</option>
+                                <option value="6">Base 6</option>
+                                <option value="7">Base 7</option>
+                                <option value="8">Base 8 (Octal)</option>
+                                <option value="9">Base 9</option>
+                                <option value="10">Base 10 (Decimal)</option>
+                                <option value="11">Base 11</option>
+                                <option value="12">Base 12</option>
+                                <option value="13">Base 13</option>
+                                <option value="14">Base 14</option>
+                                <option value="15">Base 15</option>
+                                <option value="16">Base 16 (Hexadecimal)</option>
+                                <option value="17">Base 17</option>
+                                <option value="18">Base 18</option>
+                                <option value="19">Base 19</option>
+                                <option value="20">Base 20</option>
+                                <option value="21">Base 21</option>
+                                <option value="22">Base 22</option>
+                                <option value="23">Base 23</option>
+                                <option value="24">Base 24</option>
+                                <option value="25">Base 25</option>
+                                <option value="26">Base 26</option>
+                                <option value="27">Base 27</option>
+                                <option value="28">Base 28</option>
+                                <option value="29">Base 29</option>
+                                <option value="30">Base 30</option>
+                                <option value="31">Base 31</option>
+                                <option value="32">Base 32</option>
+                                <option value="33">Base 33</option>
+                                <option value="34">Base 34</option>
+                                <option value="35">Base 35</option>
+                                <option value="36">Base 36</option>
+                                </select>
+                            </div>
+                    
+                            <div class="field">
+                                <label class="titlee">Enter first Number</label>
+                                <input type="text" id="input1" placeholder="First number">
+                            </div>
+                            <div class="field">
+                                <label class="titlee">Operation: </label>
+                                <select id="operation" name="operation">
+                                <option value="1">Addition (+)</option>
+                                <option value="2">Subtraction (-)</option>
+                                <option value="3">Multiplication (×)</option>
+                                <option value="4">Division (÷)</option>
+                                </select>
+                            </div>
+                    
+                            <div class="field">
+                                <label class="titlee">Enter second Number</label>
+                                <input type="text" id="input2" placeholder="Second number">
+                            </div>
+                            <div class="btns">
+                                <button onclick="calculate()"><strong><strong>=</strong></strong> Calculate</button>
+                                <button onclick="rest()"><i class="fa fa-eraser" aria-hidden="true"></i> Rest</button>
+                                <button onclick="swap()"><i class="fa fa-retweet" aria-hidden="true"></i> Swap</button>
+                            </div>
+                            <div class="field"> 
+                                <label class="titlee">Result</label>
+                                <textarea class="result" id="result" cols="30" rows="3"></textarea>
+                                <div class="tooltip">
+                                    <button onclick="copy()" onmouseout="outCopy()">
+                                      <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                                      Copy
+                                      </button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="sider"> 
+                        <div class="category">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>              
+                            <h2>Number convertion</h2>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="https://jadamohamed.github.io/sections/BaseConv4Common/" title="Convert from/to binary, octal, hexadecimal, decimal">Base converter(B,O,H,D)</a>
+                            </li>
+                            <li>
+                                <a href="https://jadamohamed.github.io/sections/BaseConv35/" title="Convert from/to 35 base">Base converter (35bases)</a>
+                            </li>
+                            <li>
+                                <a href="https://jadamohamed.github.io/sections/baseOperations/" title="Do any operation for any base number"> Base calculations </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sides clacInfo">
+                    <p class="titlei"> <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Be cerfull !</p>
+                    <p class="paragra">
+                        The calculator as far not responsive with the wrong type input base 
+                        <br>
+                        Example:
+                        <br>
+                         While you are trying to type a number from base 2 ( that contains ' 0 ' and ' 1 ' ) and by mistake you typed ' 3 ' the calculator will calculate your number from the right to the wrong number (ex: 1010<span class="wrong">301</span> wil be 1010)
+                        </p>
+                </div>
+            
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>CALCEV</h3>
+            <p>do not hesitate to contact us to report any problem you encountered</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+            <div class="footer-bottom">
+                Copyright &copy;2022 CALCEV. designed by <span>MEEDJ</span>
+            </div>
+    </footer>
+    <div class="DLmode" onclick="changeStatus()">
+        <img src="images/sun.png" style="width: 24px; padding-top: 19%;" id="DL">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

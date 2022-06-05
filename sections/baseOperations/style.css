@@ -201,6 +201,12 @@ filter: brightness(50%);
     .sides{
         justify-content: center;
     }
+    .content .t{
+        margin-left: 15%;
+    }
+    .content .tt{
+        margin-left: 6.5%;
+    }
 }
 
 /* ************************************* */
@@ -211,6 +217,9 @@ filter: brightness(50%);
     border: 1px solid #05595B;
     border-radius: 8px;
     padding: 8px 12px;
+}
+.clacInfo i{
+    font-size: 20px;
 }
 .clacInfo .titlei{
     font-size: 1.5rem;
@@ -325,13 +334,16 @@ footer{
     background-color: var(--five-color);
     font-family: Poppins;
 }
-.paragra span{
+.paragra .tab{
     padding-left: 2%;
+}
+.paragra .wrong{
+    color: rgb(138, 6, 6);
 }
 .content textarea {
     color: var(--primary-color);
+    width: 80%;
     max-width: 80%;
-    height: 60%;
     padding: 12px 20px;
     margin: 15px auto;
     display: inline-block;
@@ -362,6 +374,7 @@ button{
 .btns{
     padding-bottom: 8px;
 }
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -404,6 +417,7 @@ button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .field{
     display: flex;
