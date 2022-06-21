@@ -1,308 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png">
-    <title>JADA Mohamed</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a671792307.js" crossorigin="anonymous"></script>
+    <title>Jada Mohamed</title>
 </head>
+
 <body>
     <header>
-        <img class="logo" src="images/testnav.png" alt="Mohamed JADA">
-        <ul class="contact">
-            <li>
-                <a href="https://www.facebook.com/jadamohameed" target="_blank"><img src="images/icons/facebook.png"></a></li>
-            <li>
-                <a href="https://mail.google.com/mail/u/0/?fs=1&to=jadamohameed@gmail.com&su&cc&bcc&body&tf=cm" target="_blank">    </a><img src="images/icons/email.png" target="_blank"></a></li>
-            <li>
-                <a href="https://www.linkedin.com/in/mohamed-jada-9a1bb4239/" target="_blank"><img src="images/icons/linked-in.png"></a></li>
-            <li>
-                <a href="https://twitter.com/MohamedJada2" target="_blank"><img src="images/icons/twitter.png"></a></li>
-            <li>
-                <a href="https://github.com/JadaMohamed" target="_blank"><img src="images/icons/github.png"></a></li>
-        </ul>
+        <a href="#" class="logo"><img src="images/testnav.png" style="width: 50px;"></a>
+        <nav class="sections">
+            <a href="#about">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#projects">Projects</a>
+        </nav>
     </header>
-    <div class="sides">
-        <div class="leftSide">
-            <ul>
-                <a><li data-li="aboutme" class="active"><img src="images/icons/me.png" width="25px"><h3>About me</h3></li></a>
-                <a><li data-li="education"><img src="images/icons/edu.png" width="25px"><h3>Education</h3></li></a>
-                <a><li data-li="skills"><img src="images/icons/skl.png" width="25px"><h3>Skills</h3></li></a>
-                <a><li data-li="hobbies"><img src="images/icons/hob.png" width="25px"><h3>Hobbies</h3></li></a>
-                <a><li data-li="projects"><img src="images/icons/pro.png" width="24px"><h3>Projects</h3></li></a>
-            </ul>
+    <section class="about" id="about">
+        <div>
+            <h2>Hi, I'm Mohamed</h2>
+            <h3>computer science student</h3>
+            <p>I'm Mohamed Jada, 20 years from Morocco, future full stack web developer
+                <br>
+                a first year computer
+                science student at Agadir Higher school of Technology
+            </p>
+            <div>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&to=jadamohameed@gmail.com&su&cc&bcc&body&tf=cm"
+                target="_blank" class="message">Message me</a>
+                <a href="document/CV.pdf" download class="message"><i class="fa-solid fa-download"></i> CV</a>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="https://www.facebook.com/jadamohameed" target="_blank"><i
+                                class="fa-brands fa-facebook-square"></i></a></li>
+                    <li><a href="https://twitter.com/MohamedJada2" target="_blank"><i
+                                class="fa-brands fa-twitter-square"></i></a></li>
+                    <li><a href="https://github.com/JadaMohamed" target="_blank"><i
+                                class="fa-brands fa-github-square"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/mohamed-jada-9a1bb4239/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a></li>
+                    <li class="num">+212 643-714243</li>
+                </ul>
+            </div>
         </div>
-        <div class="rightSide">
-            <div class="item  aboutme" >
-                <div class="item_info">
-                    <h1 class="title"> About me</h1>
-                    <div class="about_info">
-                        <div class="aa">
-                            <img src="images/1.png">
-                            <h1 style="font-family: 'Britannic' ">JADA MOHAMED</h1>
-                        </div>
-                        <p><span>Hi,</span> I'm Mohamed 20 years from Morocco, future full stack web developer a first year computer  <br>
-                        science student at Agadir Higher school of Technology. <br>
-                        <br>
-                        <span>Why Frontend? </span> I love programming as I do with graphic design so the most thing I enjoy to do is 
-                        Web developement.
-                        </p>
-                        <div class="tables">
-                            <div class="line one">
-                                <div class="left_">NAME</div>
-                                <div class="right_">JADA Mohamed</div>
-                            </div>
-                            <div class="line two">
-                                <div class="left_">Birthday</div>
-                                <div class="right_">July 19,2002</div>
-                            </div>
-                            <div class="line three">
-                                <div class="left_">Address</div>
-                                <div class="right_">Zaouia Aourir Agadir</div>
-                            </div>
-                            <div class="line four">
-                                <div class="left_">Phone</div>
-                                <div class="right_">+212 679-008358</div>
-                            </div>
-                        </div>
+    </section>
+
+    <section id="skills">
+        <div class="item_info">
+            <h1 class="title" style="padding-bottom: 10px;">Skills</h1>
+            <div class="skills_info">
+                <div class="categ">programming languages</div>
+                <div class="lang C">
+                    <div style="display: flex; align-items: center; width: 20%;">
+                        <img src="images/Langes/c.png">
+                        <p>C</p>
+                    </div>
+                    <p class="duration">6 months</p>
+                    <div class="bar_">
+                        <p class="percentage">90%</p>
                     </div>
                 </div>
-            </div>
-            <div class="item education" style="display: none">
-                <div class="item_info">
-                    <h1 class="title">Education</h1>
-                    <div class="education_info">
-                        <div>
-                            <h2>Primary school:</h2>
-                            <h3>Sidi Ahmed Errami (Aourir)</h3>
-                            <p>2009-2015</p>
-                        </div>
-                        <div>
-                            <h2>Middle school:</h2>
-                            <h3>Al Mawz Middle school (Aourir)</h3>
-                            <p>2015-2018</p>
-                        </div>
-                        <div>
-                            <h2>High school:</h2>
-                            <h3>Aourir hight school (Aourir)</h3>
-                            <p>2018-2021</p>
-                        </div>
-                        <div>
-                            <h2>University:</h2>
-                            <h3>Agadir Higher School of Technology</h3>
-                            <p>2021-Present</p>
-                        </div>
+                <div class="lang cpp">
+                    <div style="display: flex; align-items: center; width: 20%;">
+                        <img src="images/Langes/c++.png">
+                        <p>C++</p>
+                    </div>
+                    <p class="duration">4 months</p>
+                    <div class="bar_">
+                        <p class="percentage">80%</p>
                     </div>
                 </div>
-            </div>
-            <div class="item skills" style="display: none">
-                <div class="item_info">
-                    <h1 class="title" style="padding-bottom: 10px;">Skills  </h1>
-                    <div class="skills_info">
-                        <div class="categ">programming languages</div>
-                        <div class="lang C">
-                            <div style="display: flex; align-items: center; width: 20%;">
-                            <img src="images/Langes/c.png">
-                            <p>C</p></div>
-                            <p class="duration">6 months</p>
-                            <div class="bar_">
-                                <p class="percentage">90%</p>
-                            </div>
-                        </div>
-                        <div class="lang cpp">
-                            <div style="display: flex; align-items: center; width: 20%;">
-                            <img src="images/Langes/c++.png">
-                            <p>C++</p></div>
-                            <p class="duration">4 months</p>
-                            <div class="bar_">
-                                <p class="percentage">75%</p>
-                            </div>
-                        </div>
-                        <div class="lang html">
-                            <div style="display: flex; align-items: center ; width: 20%;">
-                                <img src="images/Langes/html.png">
-                                <p>HTML</p>
-                            </div>
-                            <p class="duration">3 months</p>
-                            <div class="bar_">
-                                <p class="percentage">80%</p>
-                            </div>
-                        </div>
-                        <div class="lang js">
-                            <div style="display: flex; align-items: center; width: 20%;">
-                                <img src="images/Langes/js.png">
-                                <p>Java Script</p>
-                            </div>
-                            <p class="duration">3 months</p>
-                            <div class="bar_">
-                                <p class="percentage">60%</p>
-                            </div>
-                        </div>
-                        <div class="lang css">
-                            <div style="display: flex; align-items: center; width: 20%;">
-                                <img src="images/Langes/css.png">
-                                <p>CSS</p>
-                            </div>
-                            <p class="duration">3 months</p>
-                            <div class="bar_">
-                                <p class="percentage">75%</p>
-                            </div>
-                        </div>
-                        <div class="lang sql">
-                            <div style="display: flex; align-items: center; width: 20%;">
-                                <img src="images/Langes/sql.png">
-                                <p>SQL</p>
-                            </div>
-                            <p class="duration">3 months</p>
-                            <div class="bar_">
-                                <p class="percentage">70%</p>
-                            </div>
-                        </div>
-                        <div class="categ">Design</div>
-                        <div class="lang ps">
-                            <div style="display: flex; align-items: center ; width: 20%;">
-                                <img src="images/Langes/ps.png">
-                                <p>Photoshop</p>
-                            </div>
-                            <p class="duration">3 years</p>
-                            <div class="bar_">
-                                <p class="percentage">80%</p>
-                            </div>
-                        </div>
-                        <div class="lang ai">
-                            <div style="display: flex; align-items: center ; width: 20%;">
-                                <img src="images/Langes/ai.png">
-                                <p>Illustrator</p>
-                            </div>
-                            <p class="duration">3 years</p>
-                            <div class="bar_">
-                                <p class="percentage">75%</p>
-                          </div>
-                        </div>
+                <div class="lang html">
+                    <div style="display: flex; align-items: center ; width: 20%;">
+                        <img src="images/Langes/html.png">
+                        <p>HTML</p>
+                    </div>
+                    <p class="duration">3 months</p>
+                    <div class="bar_">
+                        <p class="percentage">95%</p>
                     </div>
                 </div>
-            </div>
-            <div class="item hobbies" style="display: none">
-                <div class="item_info" >
-                    <h1 class="title" style="padding-bottom: 20px;">Hobbies  </h1>
-                    <div class="hobbies_info">
-                        <p>Acually I don't have a specify hobbies because I like swiming, playing video games,drawing and programming. but I see my self doing the most <br>
-                        photographing + graphic design so here is a few some of my projects :</p>
-                            <div class="cards">
-                                <div class="card">
-                                    <div class="crdimg">
-                                       <img src="images/Design/adwak1.jpg">
-                                    </div>
-                                    <div class="info">
-                                        <p>Branding "Adwak Al Madina" <br>
-                                        Honey brand</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/clofall.jpg">
-                                    </div>
-                                    <p>Branding "CloFall" <br>
-                                    Cloths brand</p>
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/me.jpg">
-                                    </div>
-                                    <p>Personal identity <br>
-                                    for me</p>
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/Cooperative.jpg">
-                                    </div>
-                                    Branding "Cooperative..." <br>
-                                    touristic cooperative
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/Akar.jpg">
-                                    </div>
-                                    <p>SM post "Akar" <br>
-                                    real estate app</p>
-                                </div>
-                                <div class="portfolio">
-                                    <p>Projects progress</p>
-                                    <a  href="#" target="_blank"><img src="images/icons/behance.png" ></a>                           
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/juraa.jpg">
-                                    </div>
-                                    <p>Branding "Juraa" <br>
-                                    instagram page</p>
-                                </div>
-                                <div class="portfolio">
-                                    <p>More projects</p>
-                                    <a href="https://www.instagram.com/meed.dsn/" target="_blank"><img  src="images/icons/insta.png"></a>                                    
-                                </div>
-                                <div class="card">
-                                    <div class="crdimg">
-                                        <img src="images/Design/al boustan.jpg">
-                                    </div>
-                                    <p>SM post "Al Boustan" <br>
-                                    juice brand</p>
-                                </div>
-                            </div>
+                <div class="lang js">
+                    <div style="display: flex; align-items: center; width: 20%;">
+                        <img src="images/Langes/js.png">
+                        <p>Java Script</p>
                     </div>
-            </div>
-            </div>
-            <div class="item projects" style="display: none">
-                <div class="item_info">
-                    <h1 class="title">Projects  </h1>
-                    <div class="projects_info">
-                        <div class="cards">
-                            <div class="card">
-                                <a href="https://jadamohamed.github.io/Closure" title="Click to enter">
-                                <div class="crdimg">
-                                   <img src="images/Projects/closure.png">
-                                </div>
-                                </a>
-                                <div class="info" style="padding-bottom: 2px;">
-                                    <p>Closure of Set of Attributes</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <a href="https://jadamohamed.github.io/KeyFinder" title="Click to enter">
-                                <div class="crdimg">
-                                   <img src="images/Projects/key.png">
-                                </div>
-                                </a>
-                                <div class="info" style="padding-bottom: 2px;">
-                                    <p>Determine Keys from FDs</p>
-                                </div>
-                            </div>
-                            <div class="card" >
-                                <a href="https://jadamohamed.github.io/BCNFconv" title="Click to enter">
-                                <div class="crdimg">
-                                   <img src="images/Projects/BNFC.png">
-                                </a>
-                                </div>
-                                <div class="info" style="padding-bottom: 2px;">
-                                    <p>Boyce-Codd Relation Solver</p>
-                                </div>
-                            </div>
-                            <div class="card" >
-                                <a href="https://jadamohamed.github.io/CALCEV" title="Click to enter">
-                                <div class="crdimg">
-                                   <img src="CALCEV/images/logo.png">
-                                </a>
-                                </div>
-                                <div class="info" style="padding-bottom: 2px;">
-                                    <p>Upcoming CALCEV</p>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="duration">3 months</p>
+                    <div class="bar_">
+                        <p class="percentage">70%</p>
+                    </div>
+                </div>
+                <div class="lang css">
+                    <div style="display: flex; align-items: center; width: 20%;">
+                        <img src="images/Langes/css.png">
+                        <p>CSS</p>
+                    </div>
+                    <p class="duration">3 months</p>
+                    <div class="bar_">
+                        <p class="percentage">80%</p>
+                    </div>
+                </div>
+                <div class="lang sql">
+                    <div style="display: flex; align-items: center; width: 20%;">
+                        <img src="images/Langes/sql.png">
+                        <p>SQL</p>
+                    </div>
+                    <p class="duration">3 months</p>
+                    <div class="bar_">
+                        <p class="percentage">80%</p>
+                    </div>
+                </div>
+                <div class="categ">Design</div>
+                <div class="lang ps">
+                    <div style="display: flex; align-items: center ; width: 20%;">
+                        <img src="images/Langes/ps.png">
+                        <p>Photoshop</p>
+                    </div>
+                    <p class="duration">3 years</p>
+                    <div class="bar_">
+                        <p class="percentage">80%</p>
+                    </div>
+                </div>
+                <div class="lang ai">
+                    <div style="display: flex; align-items: center ; width: 20%;">
+                        <img src="images/Langes/ai.png">
+                        <p>Illustrator</p>
+                    </div>
+                    <p class="duration">3 years</p>
+                    <div class="bar_">
+                        <p class="percentage">70%</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+    <section id="hobbies">
+        <div class="cards" id="hobbies">
+            <div class="title">Hobbies</div>
+            <p>
+                I do swiming, drawing and programming <br> but I see my self doing the most
+                photographing + graphic design so here is a few some of my projects :
+            </p>
+            <div class="container">
+                <div class="card">
+                    <div class="icon">
+                        <img src="images/Design/Akar.jpg" alt="Akar">
+                    </div>
+                    <div class="inf">
+                        <h3>Akar</h3>
+                        Social media post for "Akar"
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="images/Design/Cooperative.jpg" alt="">
+                    </div>
+                    <div class="inf">
+                        <h3>Cooperative Anoudou</h3>
+                        Design logo of a travling cooperative
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="images/Design/adwak1.jpg" alt="">
+                    </div>
+                    <div class="inf">
+                        <h3>Adwak Al Madina</h3>
+                        Branding Honey brand
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <img src="images/Design/me.jpg" alt="">
+                    </div>
+                    <div class="inf">
+                        <h3>Med Jada</h3>
+                        Branding my personnal identity.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="cards" id="projects">
+        <div class="title">Projects</div>
+        <div class="container">
+            <div class="card">
+                <a href="https://jadamohamed.github.io/Closure" title="Click to enter">
+                    <div class="inf">
+                        <h3><i class="fa-solid fa-laptop-code"></i> CLOSURE</h3>
+                        Closure of set of attribute
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://jadamohamed.github.io/KeyFinder" title="Click to enter">
+                    <div class="inf">
+                        <h3><i class="fa-solid fa-laptop-code"></i> KEY DETRMINER</h3>
+                        Determine Key from DFs
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https://jadamohamed.github.io/BCNFconv" title="Click to enter">
+                    <div class="inf">
+                        <h3><i class="fa-solid fa-laptop-code"></i> BCNF DECOM</h3>
+                        Boyce-code Relation solver
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="https:calcev-ce.web.app" title="Click to enter">
+                    <div class="inf">
+                        <h3><i class="fa-solid fa-laptop-code"></i> CALCEV</h3>
+                        Web site CALCEV
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
-<script src="script.js"></script>
+
 </html>
