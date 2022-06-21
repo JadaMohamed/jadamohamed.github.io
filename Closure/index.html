@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <title>Closure Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boody" id="blur">
+        <div class="TITLE">Closure of a Set of Attributes</div>
+        <div class="relation">
+            <p>Relation ( </p>
+            <input type="text" id="GetRelation" placeholder="A,B,C,D,E" title="Add Relation's attributes separated with ','">
+            <p> );</p> 
+        </div>
+        <div class="function_dep">
+            <div class="title"><p>Function dependency</p></div>
+            <div>
+                <div class="fd" id="funcDs">
+                    <input class="left_" id="left_" type="text" placeholder="A,B">
+                    <img src="images/determine.png" style="width: 20px;" title="Determine">
+                    <input class="right_" id="right_" type="text" placeholder="C,D,E">
+                </div>
+            </div>
+            <div class="fd_input_wrap">
+                <button id="button_add" onclick="addfd()"><img src="images/add.png" style="width: 25px;" title="Add functional dependency"></button>
+                <button id="button_remove" onlick="removefd()"><img src="images/remove.png" style="width: 25px;" title="Remove functional dependency"></button>
+            </div>
+        </div>
+        <div class="the_set">
+            <div class="set">
+                <p>Set {</p>
+                <input type="text" id="GetSet"  placeholder="A,B" title="Add Set's attributes separated with ','">
+                <div style="display: flex;">
+                    <p>}</p>
+                    <sup>+</sup>
+                </div>
+            </div>
+            <button class="Calculate" onclick="calculate()">Calculate</button>
+        </div>
+        <div class="result">
+            <p>Result</p>
+            <div class="outp">
+                <div class="inp"><p>{</p>
+                    <div id="GetedSet">A,B</div>
+                    }<sup style="padding-right: 8px;">+</sup>=
+                </div>
+                <p id="calc_res">{A,B,C,D,E}</p>
+            </div>
+        </div>
+        <button class="popupbtn" onclick="toogle()">Code Info</button>
+    </div>
+    <div id="popup">
+        <h3>Algorithme:</h3>
+        <br>
+        1-  Add set’s attributes to closure_inp
+        <br>
+        2-  Calculate closure for each element of it and add the result to it 
+        <br>
+        3-  while we add attribute to closure_inp repeat steps 
+        <br>
+        to see if can help to add another else break
+        <br><br>
+        <h3>Running time:</h3>
+        <br>
+        while( for ( for ) ) ↔ O( n3 )
+        <br>
+        in Closure function 
+        <br><br>
+        <button class="popupbtn" onclick="toogle()">Close</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

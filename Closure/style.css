@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@800&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #c1c2fb;
+}
+.boody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.TITLE{
+    padding-bottom: 2%;
+    user-select: none;
+    font-family: Abel;
+    font-size: 2rem;
+    color: #60617d;
+}
+/* the relation section */
+.relation{
+    height: auto;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Abel;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    color: #c1c2fb;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.relation input{
+    color: #090b3f;
+    width: 60%;
+    height: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #c1c2fb;
+    font-family: Poppins;
+}
+/* the functions dependency section */
+.function_dep{
+    text-align: center;
+    height: auto;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    border-radius: 5px;
+    align-items: center;
+    font-family: Abel;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    color: #c1c2fb;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.function_dep .fd{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+.fd input{
+    color: #090b3f;
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #c1c2fb;
+    font-family: Poppins;
+}
+.fd_input_wrap{
+    padding-bottom: 10px;
+}
+.fd_input_wrap button{
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: transparent;
+    color: #c1c2fb;
+    border: none;
+}
+.fd_input_wrap button:hover{
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
+}
+
+/* The set section */
+.the_set{
+    height: auto;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Abel;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    color: #c1c2fb;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.the_set input{
+    color: #090b3f;
+    width: 60%;
+    height: 60%;
+    padding: 12px 20px;
+    margin: 15px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #c1c2fb;
+    font-family: Poppins;
+}
+.set{
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.the_set button{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #c1c2fb;
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.the_set button:hover{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* The result section */
+.result{
+    height: auto;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: Abel;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    color: #c1c2fb;
+    padding-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); 
+
+}
+.outp{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.inp{
+    display: flex;
+}
+/*************pop-up*************/
+.popupbtn{
+    background-color: #60617d;
+    font-family: Abel;
+    color: #c1c2fb;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0 0 5px;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+.boody#blur.active{
+    filter: blur(20px);
+}
+#popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background: #c1c2fb;
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    color: #090b3f;
+    font-family: Abel;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5% 0 2% 0;
+    font-size: larger;
+    user-select: none;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+}

@@ -1,50 +1,29 @@
-function toggleMenu(){
-    let bar =document.querySelector('.navigationbar');
-    let toggle =document.querySelector('.toggle');
-    bar.classList.toggle('active');
-    toggle.classList.toggle('active');
-}
-
- //
-
-if (localStorage.getItem('light-mode')===null){
-    localStorage.setItem('light-mode', "false");
-}
-
-checkStatus()
-
-function checkStatus(){
-    var elem= document.getElementById('DL');
-    if (localStorage.getItem('light-mode')==="true"){
-        document.body.classList.add('light-mode');
-        elem.src="images/moon.png";
-    }else{
-        document.body.classList.remove('light-mode');
-        elem.src="images/sun.png" ;
-    }
-}
-
-function DL(){
-    var elem= document.getElementById('DL');
-     document.body.classList.toggle('light-mode');
-    if(document.body.classList.contains('light-mode')){
-        elem.src="images/moon.png";
-    }
-     else{
-         elem.src="images/sun.png" ;
-     }
- }
-
-
-function changeStatus(){                                           
-    if (localStorage.getItem('light-mode')==="true"){
-        localStorage.setItem('light-mode', "false");
-        DL();
-    } else{
-        localStorage.setItem('light-mode', "true");
-        DL();
-    }
-}
-function comming(){
-    alert('Comming soon !');
+var li_elements = document.querySelectorAll(".leftSide ul a li");
+var item_elements = document.querySelectorAll(".item");
+for(var i = 0; i < li_elements.length ; i++ ){
+    li_elements[i].addEventListener("click", function(){
+        li_elements.forEach(function(li){
+            li.classList.remove("active");
+        })
+        this.classList.add("active");
+        var li_value = this.getAttribute("data-li");
+        item_elements.forEach(function(item){
+            item.style.display="none";
+        })    
+        if(li_value == "aboutme"){
+            document.querySelector("." + li_value).style.display='block';
+        }
+        else if(li_value == "education"){
+            document.querySelector("." + li_value).style.display='block';
+        }
+        else if(li_value == "skills"){
+            document.querySelector("." + li_value).style.display='block';
+        }
+        else if(li_value == "hobbies"){
+            document.querySelector("." + li_value).style.display='block';
+        }
+        else if(li_value == "projects"){
+            document.querySelector("." + li_value).style.display='block';
+        }
+    })
 }
